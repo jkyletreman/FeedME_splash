@@ -10,51 +10,47 @@
   padding: 0;
 }
 
-body {
+.banner {
+  width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
-  /* Enable scrolling on the page. */
-  overflow-y: auto;
-  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-  perspective: 2px;
-  background-color: rgba(255,255,255,.4)
+  margin: 0 auto;
+}
+
+.banner-img {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1471193945509-9ad0617afabf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d2b5c3a30ad1ec478df74c83536d47e3&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.9;
 }
 
 .landing-image {
+  margin: 0 auto;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://images.unsplash.com/photo-1471193945509-9ad0617afabf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d2b5c3a30ad1ec478df74c83536d47e3&auto=format&fit=crop&w=1350&q=80");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .landing-card {
-  background-color: rgba(0, 0, 0, 0.3);
-  height: 60%;
-  width: 70%;
   color: white;
   margin: auto;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
 .title {
-  padding-top: 5%;
-  font-size: 5em;
   font-family: var(--title);
   color: var(--red);
 }
 
 .subtitle {
   font-family: var(--body);
-  font-size: 32px;
+  color: white;
   padding-top: 2%;
 }
 
@@ -67,77 +63,95 @@ body {
   justify-content: space-around;
 }
 
-@media screen and (max-width: 800px){
-  .buttons {
-    flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 801px) {
-  .buttons {
-    flex-direction: row;
-  }
-}
-
 .btn {
   margin-top: 1.5rem;
   min-width: 10rem;
 }
 
 .content-bar {
-  position: relative;
-  top: 100%;
-  width: 100%;
-  height: 80%;
   background: #FBFEF9;
   display: flex;
   justify-content: space-around;
-}
-
-@media screen and (max-width: 800px){
-  .content-bar {
-    flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 801px) {
-  .content-bar {
-    flex-direction: row;
-  }
+  padding: 1rem;
 }
 
 .content-bar-card {
-  margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.1);
-  display: block;
   border: 5px solid rgba(0, 0, 0, 0.5);
   box-shadow: 3px 3px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   text-align: center;
   max-width: 400px;
-}
-
-@media screen and (min-width: 801px) {
-  .content-bar-card {
-    height: 40%;
-    width: 90%;
-    position: relative;
-    top: 20%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
+  margin: 1rem 0;
+  padding: 0 1rem;
 }
 
 .card-title {
-  padding-top: 5%;
-  font-size: 32px;
+
   font-family: "Quicksand", "sans-serif";
   color: var(--red);
 }
 
 .card-description {
-  font-family: 'Poiret One', 'cursive';
-  font-size: 24px;
-  padding-top: 15%;
+  font-family: var(--body);
+}
+
+/* mobile */
+@media screen and (max-width: 800px){
+  .landing-image {
+    width: 90%;
+    top: 2rem;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .title {
+  font-size: 3.5em;
+  }
+  .subtitle {
+  font-size: 2em;
+  }
+  .content-bar {
+    flex-direction: column;
+  }
+  .card-title {
+    font-size: 1.7em;
+    padding-top: 1rem;
+  }
+  .card-description {
+    font-size: 1.5em;
+  }
+}
+/* desktop */
+@media screen and (min-width: 801px) {
+  .landing-image {
+    width: 70%;
+    top: 10rem;
+  }
+  .buttons {
+    flex-direction: row;
+  }
+  .title {
+    padding-top: 5%;
+    font-size: 5em;
+  }
+  .subtitle {
+    font-size: 32px;
+  }
+  .content-bar {
+    flex-direction: row;
+  }
+  .content-bar-card {
+    height: 40%;
+    width: 90%;
+    margin-top: 8rem;
+  }
+  .card-title {
+    padding-top: 5%;
+    font-size: 32px;
+  }
+  .card-description {
+    font-size: 24px;
+    padding-top: 15%;
+  }
 }

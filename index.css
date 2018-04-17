@@ -39,8 +39,7 @@
 }
 
 .landing-card {
-  color: white;
-  margin: auto;
+
 }
 
 .title {
@@ -56,7 +55,7 @@
 
 .buttons {
   display: flex;
-  padding-top: 8%;
+  padding-top: 5%;
   opacity: 0.9;
   max-width: 10rem;
   margin: 0 auto;
@@ -66,6 +65,7 @@
 .btn {
   margin-top: 1.5rem;
   min-width: 10rem;
+  min-height: 2.2rem;
 }
 
 .content-bar {
@@ -87,20 +87,22 @@
 }
 
 .card-title {
-
+  width: 100%;
   font-family: "Quicksand", "sans-serif";
   color: var(--red);
 }
 
 .card-description {
+  width: 100%;
   font-family: var(--body);
 }
 
 /* mobile */
 @media screen and (max-width: 800px){
   .landing-image {
-    width: 90%;
+    width: 90vw;
     top: 2rem;
+    bottom: 2rem;
   }
   .buttons {
     flex-direction: column;
@@ -115,11 +117,11 @@
     flex-direction: column;
   }
   .card-title {
-    font-size: 1.7em;
+    font-size: 1.5em;
     padding-top: 1rem;
   }
   .card-description {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
 }
 /* desktop */

@@ -6,6 +6,6 @@ viewTheCodeBtn.addEventListener("click", function() {
 
 const viewTheApp = document.getElementById("app");
 
-viewTheCodeBtn.addEventListener("click", function() {
+viewTheApp.addEventListener("click", function() {
   location.href = "https://feedme-mealplanner.herokuapp.com/"
 })

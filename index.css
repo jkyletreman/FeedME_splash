@@ -1,3 +1,15 @@
+:root {
+  --red: #ED5147;
+  --title: "Quicksand", "sans-serif";
+  --body: 'Poiret One', 'cursive';
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   height: 100vh;
   overflow-x: hidden;
@@ -5,6 +17,7 @@ body {
   overflow-y: auto;
   /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
   perspective: 2px;
+  background-color: rgba(255,255,255,.4)
 }
 
 .landing-image {
@@ -35,19 +48,39 @@ body {
 .title {
   padding-top: 5%;
   font-size: 50px;
-  font-family: "Quicksand", "sans-serif";
-  color: #ED5147;
+  font-family: var(--title);
+  color: var(--red);
 }
 
 .subtitle {
-  font-family: 'Poiret One', 'cursive';
+  font-family: var(--body);
   font-size: 32px;
   padding-top: 2%;
 }
 
 .buttons {
+  display: flex;
   padding-top: 8%;
   opacity: 0.9;
+  max-width: 10rem;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 800px){
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .buttons {
+    flex-direction: row;
+  }
+}
+
+.btn {
+  margin-top: 1.5rem;
 }
 
 .content-bar {
@@ -56,22 +89,26 @@ body {
   width: 100%;
   height: 80%;
   background: #FBFEF9;
-  display: grid;
-  grid-template-columns: repeat(3, auto);
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 800px){
+  .content-bar {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .content-bar {
+    flex-direction: row;
+  }
 }
 
 .content-bar-card {
   margin: 0 auto;
-  padding-top: 10%;
   background-color: rgba(255, 255, 255, 0.1);
-  height: 60%;
-  width: 90%;
   display: block;
-  position: relative;
-  top: 20%;
-  right: 0;
-  bottom: 0;
-  left: 0;
   border: 5px solid rgba(0, 0, 0, 0.5);
   box-shadow: 3px 3px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
@@ -79,11 +116,23 @@ body {
   max-width: 400px;
 }
 
+@media screen and (min-width: 801px) {
+  .content-bar-card {
+    height: 40%;
+    width: 90%;
+    position: relative;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
 .card-title {
   padding-top: 5%;
   font-size: 32px;
   font-family: "Quicksand", "sans-serif";
-  color: #ED5147;
+  color: var(--red);
 }
 
 .card-description {

@@ -81,6 +81,7 @@ body {
 
 .btn {
   margin-top: 1.5rem;
+  min-width: 10rem;
 }
 
 .content-bar {
